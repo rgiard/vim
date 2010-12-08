@@ -7,3 +7,6 @@
 [submodule "bundle/zencoding"]
 	path = bundle/zencoding
 	url = https://github.com/vim-scripts/ZenCoding.vim.git
+[submodule "bundle/macvim-theme"]
+	path = bundle/macvim-theme
+	url = https://github.com/nelstrom/vim-mac-classic-theme.git
