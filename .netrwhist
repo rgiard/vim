@@ -1,4 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/remy/dev/trilliant/unity/plugins/com.trilliantnetworks.unity.centrica.installer/build/ant_output'
-let g:netrw_dirhist_2='/Users/remy/dev/trilliant/unity/plugins/com.trilliantnetworks.unity.centrica.ddl/build'
