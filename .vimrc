@@ -50,6 +50,8 @@ let g:NERDTreeWinSize=50
 set gfn=Inconsolata\ 11
 set guifont=Inconsolata\ 11
 
+let Tlist_Ctags_Cmd="/opt/ctags-5.8/ctags"
+
 source /usr/share/vim/vim72/mswin.vim
 behave mswin
 
@@ -73,4 +75,14 @@ if has("autocmd")
 endif
 
 syntax on
+
+
+" autocompletion
+if has("autocmd")
+  autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+endif
+
+setlocal completefunc=javacomplete#CompleteParamsInfo
+inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P>
+inoremap <buffer> <C-S-Space> <C-X><C-U><C-P>
 
