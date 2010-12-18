@@ -65,24 +65,25 @@ set directory=/var/vim/
 
 colorscheme mac_classic
 
-" DRUPAL SETTINGS
+
 if has("autocmd")
+  " DRUPAL SETTINGS
   augroup module
     autocmd BufRead,BufNewFile *.module set filetype=php
     autocmd BufRead,BufNewFile *.install set filetype=php
     autocmd BufRead,BufNewFile *.test set filetype=php
   augroup END
-endif
 
-syntax on
-
-
-" autocompletion
-if has("autocmd")
+  " autocompletion
   autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+
+  " auto-open taglist on programming files
+  autocmd Filetype ruby,java,python,php execute ":TlistOpen"
 endif
 
 setlocal completefunc=javacomplete#CompleteParamsInfo
 inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P>
 inoremap <buffer> <C-S-Space> <C-X><C-U><C-P>
+
+syntax on
 
